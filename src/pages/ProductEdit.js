@@ -13,7 +13,7 @@ const rules = Yup.object().shape({
 function ProductEdit(props) {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [selectedFile, setSelectedFile] = useState();
+    // const [selectedFile, setSelectedFile] = useState();
     const [formData, setFormData] = useState({
         name: '',
         price:'',
@@ -34,7 +34,7 @@ function ProductEdit(props) {
         let data = {
             name: values.name,
             price: values.price,
-            stock: values.inventory,
+            stock: values.stock,
             description: values.description,
         }
         ProductModel.update(id, data)
